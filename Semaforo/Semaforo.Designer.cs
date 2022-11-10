@@ -36,12 +36,20 @@ namespace Semaforo {
             this.pcbS = new System.Windows.Forms.PictureBox();
             this.pcbN = new System.Windows.Forms.PictureBox();
             this.lblnumero = new System.Windows.Forms.Label();
+            this.pcbF1 = new System.Windows.Forms.PictureBox();
+            this.pcbF2 = new System.Windows.Forms.PictureBox();
+            this.pcbF3 = new System.Windows.Forms.PictureBox();
+            this.pcbF4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF4)).BeginInit();
             this.SuspendLayout();
             // 
             // chkPreventivas
@@ -142,6 +150,10 @@ namespace Semaforo {
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pcbF4);
+            this.panel1.Controls.Add(this.pcbF3);
+            this.panel1.Controls.Add(this.pcbF2);
+            this.panel1.Controls.Add(this.pcbF1);
             this.panel1.Controls.Add(this.pcbO);
             this.panel1.Controls.Add(this.pcbE);
             this.panel1.Controls.Add(this.pcbS);
@@ -210,6 +222,50 @@ namespace Semaforo {
             this.lblnumero.Text = "0";
             this.lblnumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pcbF1
+            // 
+            this.pcbF1.BackColor = System.Drawing.Color.Transparent;
+            this.pcbF1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbF1.InitialImage")));
+            this.pcbF1.Location = new System.Drawing.Point(418, 627);
+            this.pcbF1.Name = "pcbF1";
+            this.pcbF1.Size = new System.Drawing.Size(90, 90);
+            this.pcbF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbF1.TabIndex = 8;
+            this.pcbF1.TabStop = false;
+            // 
+            // pcbF2
+            // 
+            this.pcbF2.BackColor = System.Drawing.Color.Transparent;
+            this.pcbF2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbF2.InitialImage")));
+            this.pcbF2.Location = new System.Drawing.Point(305, 72);
+            this.pcbF2.Name = "pcbF2";
+            this.pcbF2.Size = new System.Drawing.Size(90, 90);
+            this.pcbF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbF2.TabIndex = 9;
+            this.pcbF2.TabStop = false;
+            // 
+            // pcbF3
+            // 
+            this.pcbF3.BackColor = System.Drawing.Color.Transparent;
+            this.pcbF3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbF3.InitialImage")));
+            this.pcbF3.Location = new System.Drawing.Point(645, 292);
+            this.pcbF3.Name = "pcbF3";
+            this.pcbF3.Size = new System.Drawing.Size(90, 90);
+            this.pcbF3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbF3.TabIndex = 10;
+            this.pcbF3.TabStop = false;
+            // 
+            // pcbF4
+            // 
+            this.pcbF4.BackColor = System.Drawing.Color.Transparent;
+            this.pcbF4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbF4.InitialImage")));
+            this.pcbF4.Location = new System.Drawing.Point(81, 403);
+            this.pcbF4.Name = "pcbF4";
+            this.pcbF4.Size = new System.Drawing.Size(90, 90);
+            this.pcbF4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbF4.TabIndex = 11;
+            this.pcbF4.TabStop = false;
+            // 
             // Semaforo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +289,10 @@ namespace Semaforo {
             ((System.ComponentModel.ISupportInitialize)(this.pcbE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbF4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,6 +309,10 @@ namespace Semaforo {
         private System.Windows.Forms.PictureBox pcbO;
         private System.Windows.Forms.PictureBox pcbE;
         private System.Windows.Forms.Label lblnumero;
+        private System.Windows.Forms.PictureBox pcbF1;
+        private System.Windows.Forms.PictureBox pcbF4;
+        private System.Windows.Forms.PictureBox pcbF3;
+        private System.Windows.Forms.PictureBox pcbF2;
     }
 }
 

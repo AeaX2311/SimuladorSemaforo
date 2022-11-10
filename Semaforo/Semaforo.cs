@@ -15,6 +15,7 @@ namespace Semaforo {
             forzarSemaforoRojo = false;
             apagarSemaforos();
             lblnumero.ForeColor = Color.FromArgb(43, 43, 43);
+            pcbF4.Image = Image.FromFile(ruta + "Flecha.gif");
         }
 
         private delegate void DActualizarVista();
@@ -47,12 +48,14 @@ namespace Semaforo {
         }
 
         private void iniciarSimulacion() {
+            semaforoVerticalEncendido = true;
             ejecutarSimulador = true;
             if(!pausarPrograma) {
                 numero = 0;
                 contadorSegundos = 1;
             } else {
                 numero--;
+                mostrarFlechas();
             }
             hiloTrabajo = new Thread(new ThreadStart(simular));
             hiloTrabajo.Start();
@@ -86,9 +89,10 @@ namespace Semaforo {
 
             ////Se estara ejecutando indeterminadamente hasta que se detenga manualmente el proceso
             while(ejecutarSimulador) {
-                //Stopwatch timeMeasure = new Stopwatch();
-                //timeMeasure.Start();
                 if(!preventivasOn) {
+                    if(contadorSegundos == 2) {
+                        mostrarFlechas();
+                    }
                     if(contadorSegundos == 27) { //Cambiar de semaforo
                         contadorSegundos = 1; //Resetear conteo
                         numero = 1; //Primer valor
@@ -160,9 +164,6 @@ namespace Semaforo {
                 Thread.Sleep(sleep);
                 Invoke(dActualizarVista);
                 contadorSegundos++;
-
-                //timeMeasure.Stop();
-                //Console.WriteLine($"Tiempo: {timeMeasure.Elapsed.TotalMilliseconds} ms");
             }
             
             apagar();
@@ -186,6 +187,11 @@ namespace Semaforo {
         private void btnPausar_Click(object sender, EventArgs e) {
             apagar();
             pausarPrograma = true;
+
+            pcbF1.Image = null;
+            pcbF2.Image = null;
+            pcbF3.Image = null;
+            pcbF4.Image = null;
         }
 
         private void btnDetener_Click(object sender, EventArgs e) {
@@ -210,6 +216,11 @@ namespace Semaforo {
                 pcbS.BackgroundImage = semaforo2;
                 pcbE.BackgroundImage = semaforoR1;
                 pcbO.BackgroundImage = semaforoR2;
+
+                pcbF1.Image = null;
+                pcbF2.Image = null;
+                pcbF3.Image = null;
+                pcbF4.Image = null;
 
                 return;
             }
@@ -248,6 +259,25 @@ namespace Semaforo {
             pcbS.BackgroundImage = semaforo2;
             pcbE.BackgroundImage = semaforo3;
             pcbO.BackgroundImage = semaforo4;
+
+            pcbF1.Image = null;
+            pcbF2.Image = null;
+            pcbF3.Image = null;
+            pcbF4.Image = null;
+        }
+
+        private void mostrarFlechas() {
+            if(semaforoVerticalEncendido) {
+                pcbF1.Image = Image.FromFile(ruta + "Flecha2.gif");
+                pcbF2.Image = Image.FromFile(ruta + "Flecha3.gif");
+                pcbF3.Image = null;
+                pcbF4.Image = null;
+            } else {
+                pcbF3.Image = Image.FromFile(ruta + "Flecha.gif");
+                pcbF4.Image = Image.FromFile(ruta + "Flecha4.gif");
+                pcbF1.Image = null;
+                pcbF2.Image = null;
+            }
         }
     }
 }
