@@ -25,36 +25,24 @@ namespace Semaforo {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Semaforo));
-            this.lblnumero = new System.Windows.Forms.Label();
-            this.lblSemaforo = new System.Windows.Forms.Label();
             this.chkPreventivas = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDetener = new FontAwesome.Sharp.IconButton();
             this.btnPausar = new FontAwesome.Sharp.IconButton();
             this.btnIniciar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pcbO = new System.Windows.Forms.PictureBox();
+            this.pcbE = new System.Windows.Forms.PictureBox();
+            this.pcbS = new System.Windows.Forms.PictureBox();
+            this.pcbN = new System.Windows.Forms.PictureBox();
+            this.lblnumero = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbN)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblnumero
-            // 
-            this.lblnumero.AutoSize = true;
-            this.lblnumero.Font = new System.Drawing.Font("Digital-7 Mono", 89.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnumero.Location = new System.Drawing.Point(344, 269);
-            this.lblnumero.Name = "lblnumero";
-            this.lblnumero.Size = new System.Drawing.Size(107, 123);
-            this.lblnumero.TabIndex = 3;
-            this.lblnumero.Text = "0";
-            // 
-            // lblSemaforo
-            // 
-            this.lblSemaforo.AutoSize = true;
-            this.lblSemaforo.Location = new System.Drawing.Point(280, 317);
-            this.lblSemaforo.Name = "lblSemaforo";
-            this.lblSemaforo.Size = new System.Drawing.Size(35, 13);
-            this.lblSemaforo.TabIndex = 6;
-            this.lblSemaforo.Text = "label1";
             // 
             // chkPreventivas
             // 
@@ -63,7 +51,7 @@ namespace Semaforo {
             this.chkPreventivas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkPreventivas.Dock = System.Windows.Forms.DockStyle.Right;
             this.chkPreventivas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPreventivas.Location = new System.Drawing.Point(649, 16);
+            this.chkPreventivas.Location = new System.Drawing.Point(645, 16);
             this.chkPreventivas.Name = "chkPreventivas";
             this.chkPreventivas.Size = new System.Drawing.Size(161, 58);
             this.chkPreventivas.TabIndex = 8;
@@ -81,7 +69,7 @@ namespace Semaforo {
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(813, 77);
+            this.groupBox1.Size = new System.Drawing.Size(809, 77);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -90,6 +78,7 @@ namespace Semaforo {
             this.btnDetener.BackColor = System.Drawing.Color.Salmon;
             this.btnDetener.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetener.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDetener.Enabled = false;
             this.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetener.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetener.IconChar = FontAwesome.Sharp.IconChar.Stop;
@@ -111,6 +100,7 @@ namespace Semaforo {
             this.btnPausar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnPausar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPausar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPausar.Enabled = false;
             this.btnPausar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPausar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPausar.IconChar = FontAwesome.Sharp.IconChar.Pause;
@@ -152,26 +142,86 @@ namespace Semaforo {
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pcbO);
+            this.panel1.Controls.Add(this.pcbE);
+            this.panel1.Controls.Add(this.pcbS);
+            this.panel1.Controls.Add(this.pcbN);
             this.panel1.Controls.Add(this.lblnumero);
-            this.panel1.Controls.Add(this.lblSemaforo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 746);
+            this.panel1.Size = new System.Drawing.Size(809, 786);
             this.panel1.TabIndex = 10;
+            // 
+            // pcbO
+            // 
+            this.pcbO.BackColor = System.Drawing.Color.Transparent;
+            this.pcbO.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbO.BackgroundImage")));
+            this.pcbO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbO.Location = new System.Drawing.Point(93, 215);
+            this.pcbO.Name = "pcbO";
+            this.pcbO.Size = new System.Drawing.Size(100, 82);
+            this.pcbO.TabIndex = 7;
+            this.pcbO.TabStop = false;
+            // 
+            // pcbE
+            // 
+            this.pcbE.BackColor = System.Drawing.Color.Transparent;
+            this.pcbE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbE.BackgroundImage")));
+            this.pcbE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbE.Location = new System.Drawing.Point(625, 488);
+            this.pcbE.Name = "pcbE";
+            this.pcbE.Size = new System.Drawing.Size(100, 82);
+            this.pcbE.TabIndex = 6;
+            this.pcbE.TabStop = false;
+            // 
+            // pcbS
+            // 
+            this.pcbS.BackColor = System.Drawing.Color.Transparent;
+            this.pcbS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbS.BackgroundImage")));
+            this.pcbS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbS.Location = new System.Drawing.Point(215, 600);
+            this.pcbS.Name = "pcbS";
+            this.pcbS.Size = new System.Drawing.Size(82, 100);
+            this.pcbS.TabIndex = 5;
+            this.pcbS.TabStop = false;
+            // 
+            // pcbN
+            // 
+            this.pcbN.BackColor = System.Drawing.Color.Transparent;
+            this.pcbN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbN.BackgroundImage")));
+            this.pcbN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbN.Location = new System.Drawing.Point(505, 82);
+            this.pcbN.Name = "pcbN";
+            this.pcbN.Size = new System.Drawing.Size(82, 100);
+            this.pcbN.TabIndex = 4;
+            this.pcbN.TabStop = false;
+            // 
+            // lblnumero
+            // 
+            this.lblnumero.BackColor = System.Drawing.Color.Transparent;
+            this.lblnumero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblnumero.Font = new System.Drawing.Font("Digital-7 Mono", 89.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnumero.ForeColor = System.Drawing.Color.White;
+            this.lblnumero.Location = new System.Drawing.Point(0, 0);
+            this.lblnumero.Name = "lblnumero";
+            this.lblnumero.Size = new System.Drawing.Size(809, 786);
+            this.lblnumero.TabIndex = 3;
+            this.lblnumero.Text = "0";
+            this.lblnumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Semaforo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 823);
+            this.ClientSize = new System.Drawing.Size(809, 863);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 39);
+            this.MinimumSize = new System.Drawing.Size(625, 39);
             this.Name = "Semaforo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simulador semaforo";
@@ -179,20 +229,26 @@ namespace Semaforo {
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbN)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblnumero;
-        private System.Windows.Forms.Label lblSemaforo;
         private System.Windows.Forms.CheckBox chkPreventivas;
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btnIniciar;
         private FontAwesome.Sharp.IconButton btnPausar;
         private FontAwesome.Sharp.IconButton btnDetener;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pcbS;
+        private System.Windows.Forms.PictureBox pcbN;
+        private System.Windows.Forms.PictureBox pcbO;
+        private System.Windows.Forms.PictureBox pcbE;
+        private System.Windows.Forms.Label lblnumero;
     }
 }
 
