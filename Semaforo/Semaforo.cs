@@ -15,7 +15,6 @@ namespace Semaforo {
             forzarSemaforoRojo = false;
             apagarSemaforos();
             lblnumero.ForeColor = Color.FromArgb(43, 43, 43);
-            pcbF4.Image = Image.FromFile(ruta + "Flecha.gif");
         }
 
         private delegate void DActualizarVista();
